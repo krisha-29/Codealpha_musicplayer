@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Spotify Clone</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h1>🎵 MySpotify</h1>
+      <nav>
+        <ul>
+          <li class="active">🏠 Home</li>
+          <li>🔍 Search</li>
+          <li>📚 Your Library</li>
+        </ul>
+      </nav>
+      <button id="createPlaylistBtn">+ Create Playlist</button>
+      <div id="userPlaylists"></div>
+    </aside>
+
+    <!-- Main Dashboard -->
+    <main class="dashboard">
+      <div class="now-playing">
+        <h2 id="title">Song Title</h2>
+        <h4 id="artist">Artist Name</h4>
+
+        <audio id="audio" src=""></audio>
+
+        <div class="controls">
+          <button id="prev">⏮️</button>
+          <button id="play">▶️</button>
+          <button id="next">⏭️</button>
+        </div>
+
+        <input type="range" id="progress" value="0">
+        <div id="time">00:00 / 00:00</div>
+
+        <label>Volume
+          <input type="range" id="volume" min="0" max="1" step="0.01" value="1">
+        </label>
+      </div>
+
+      <section class="playlist" id="playlist"></section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
